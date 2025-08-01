@@ -9,8 +9,7 @@ class Login;
 }
 QT_END_NAMESPACE
 
-class Login : public QWidget
-{
+class Login : public QWidget {
     Q_OBJECT
 
 public:

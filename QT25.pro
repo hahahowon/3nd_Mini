@@ -11,17 +11,37 @@ CONFIG += c++17
 INCLUDEPATH += model view controller lang
 
 SOURCES += \
+    controller/viewcontroller.cpp \
     view/admin.cpp \
     model/main.cpp \
-    view/login.cpp
+    view/adminchatform.cpp \
+    view/admininfoform.cpp \
+    view/adminorderlistform.cpp \
+    view/adminproductform.cpp \
+    view/login.cpp \
+    view/normalchatform.cpp \
+    view/normalorderform.cpp
 
 HEADERS += \
+    controller/viewcontroller.h \
     view/admin.h \
-    view/login.h
+    view/adminchatform.h \
+    view/admininfoform.h \
+    view/adminorderlistform.h \
+    view/adminproductform.h \
+    view/login.h \
+    view/normalchatform.h \
+    view/normalorderform.h
 
 FORMS += \
     view/admin.ui \
-    view/login.ui
+    view/adminchatform.ui \
+    view/admininfoform.ui \
+    view/adminorderlistform.ui \
+    view/adminproductform.ui \
+    view/login.ui \
+    view/normalchatform.ui \
+    view/normalorderform.ui
 
 TRANSLATIONS += \
     lang/QT25_ko_KR.ts

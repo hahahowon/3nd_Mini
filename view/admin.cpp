@@ -11,7 +11,6 @@ Admin::Admin(QWidget *parent)
     setWindowTitle(tr("QT25 관리자 시스템"));
 }
 
-Admin::~Admin()
-{
+Admin::~Admin() {
     delete ui;
 }

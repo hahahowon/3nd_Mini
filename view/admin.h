@@ -7,8 +7,7 @@ namespace Ui {
 class Admin;
 }
 
-class Admin : public QMainWindow
-{
+class Admin : public QMainWindow {
     Q_OBJECT
 
 public:
