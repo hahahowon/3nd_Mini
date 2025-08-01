@@ -7,8 +7,7 @@ namespace Ui {
 class AdminOrderListForm;
 }
 
-class AdminOrderListForm : public QWidget
-{
+class AdminOrderListForm : public QWidget {
     Q_OBJECT
 
 public:
