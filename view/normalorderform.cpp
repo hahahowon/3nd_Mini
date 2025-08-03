@@ -7,7 +7,6 @@ NormalOrderForm::NormalOrderForm(QWidget *parent)
     ui->setupUi(this);
 }
 
-NormalOrderForm::~NormalOrderForm()
-{
+NormalOrderForm::~NormalOrderForm() {
     delete ui;
 }

@@ -12,7 +12,7 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QMainWindow>
-#include <QtWidgets/QStatusBar>
+#include <QtWidgets/QTabWidget>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -21,7 +21,7 @@ class Ui_Admin
 {
 public:
     QWidget *centralwidget;
-    QStatusBar *statusbar;
+    QTabWidget *tabWidget;
 
     void setupUi(QMainWindow *Admin)
     {
@@ -30,10 +30,10 @@ public:
         Admin->resize(800, 600);
         centralwidget = new QWidget(Admin);
         centralwidget->setObjectName("centralwidget");
+        tabWidget = new QTabWidget(centralwidget);
+        tabWidget->setObjectName("tabWidget");
+        tabWidget->setGeometry(QRect(0, 0, 800, 600));
         Admin->setCentralWidget(centralwidget);
-        statusbar = new QStatusBar(Admin);
-        statusbar->setObjectName("statusbar");
-        Admin->setStatusBar(statusbar);
 
         retranslateUi(Admin);
 

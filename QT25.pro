@@ -11,7 +11,9 @@ CONFIG += c++17
 INCLUDEPATH += model view controller lang
 
 SOURCES += \
-    controller/viewcontroller.cpp \
+    controller/admincontroller.cpp \
+    controller/logincontroller.cpp \
+    controller/normalcontroller.cpp \
     view/admin.cpp \
     model/main.cpp \
     view/adminchatform.cpp \
@@ -19,17 +21,21 @@ SOURCES += \
     view/adminorderlistform.cpp \
     view/adminproductform.cpp \
     view/login.cpp \
+    view/normal.cpp \
     view/normalchatform.cpp \
     view/normalorderform.cpp
 
 HEADERS += \
-    controller/viewcontroller.h \
+    controller/admincontroller.h \
+    controller/logincontroller.h \
+    controller/normalcontroller.h \
     view/admin.h \
     view/adminchatform.h \
     view/admininfoform.h \
     view/adminorderlistform.h \
     view/adminproductform.h \
     view/login.h \
+    view/normal.h \
     view/normalchatform.h \
     view/normalorderform.h
 
@@ -40,6 +46,7 @@ FORMS += \
     view/adminorderlistform.ui \
     view/adminproductform.ui \
     view/login.ui \
+    view/normal.ui \
     view/normalchatform.ui \
     view/normalorderform.ui
 

@@ -7,7 +7,6 @@ NormalChatForm::NormalChatForm(QWidget *parent)
     ui->setupUi(this);
 }
 
-NormalChatForm::~NormalChatForm()
-{
+NormalChatForm::~NormalChatForm() {
     delete ui;
 }
