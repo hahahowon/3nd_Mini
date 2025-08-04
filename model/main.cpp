@@ -1,6 +1,6 @@
 #include "login.h"
 #include "logincontroller.h"
-
+#include "database.h"
 #include <QApplication>
 #include <QLocale>
 #include <QTranslator>
@@ -9,9 +9,8 @@ int main(int argc, char *argv[]) {
     QApplication a(argc, argv);
     // DB Class의 생성자 호출 및 QMap 형태의 List 호출하여 로그인 로직 구현
     /***************************************************************/
-    //
-    //
-    //
+    Database& db = Database::getInstance();
+    db.connectToDatabase();
     /***************************************************************/
 
     // 국제화 로직 구현

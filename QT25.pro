@@ -14,6 +14,7 @@ SOURCES += \
     controller/admincontroller.cpp \
     controller/logincontroller.cpp \
     controller/normalcontroller.cpp \
+    model/database.cpp \
     view/admin.cpp \
     model/main.cpp \
     view/adminchatform.cpp \
@@ -29,6 +30,7 @@ HEADERS += \
     controller/admincontroller.h \
     controller/logincontroller.h \
     controller/normalcontroller.h \
+    model/database.h \
     view/admin.h \
     view/adminchatform.h \
     view/admininfoform.h \

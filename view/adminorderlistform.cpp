@@ -3,12 +3,10 @@
 
 AdminOrderListForm::AdminOrderListForm(QWidget *parent)
     : QWidget(parent)
-    , ui(new Ui::AdminOrderListForm)
-{
+    , ui(new Ui::AdminOrderListForm) {
     ui->setupUi(this);
 }
 
-AdminOrderListForm::~AdminOrderListForm()
-{
+AdminOrderListForm::~AdminOrderListForm() {
     delete ui;
 }
