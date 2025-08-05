@@ -1,0 +1,22 @@
+cmake_minimum_required(VERSION 3.10)
+project(qr_gpio_sender)
+
+set(CMAKE_CXX_STANDARD 17)
+
+# OpenCV 설정
+find_package(OpenCV REQUIRED)
+include_directories(${OpenCV_INCLUDE_DIRS})
+
+# WiringPi
+find_library(WIRINGPI_LIB wiringPi)
+if(NOT WIRINGPI_LIB)
+    message(FATAL_ERROR "WiringPi library not found!")
+endif()
+
+add_executable(qr_gpio_sender main.cpp)
+
+target_link_libraries(qr_gpio_sender
+    ${OpenCV_LIBS}
+    ${WIRINGPI_LIB}
+    pthread
+)
