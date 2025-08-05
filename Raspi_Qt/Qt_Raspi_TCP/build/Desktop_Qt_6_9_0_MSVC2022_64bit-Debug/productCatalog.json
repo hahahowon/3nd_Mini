@@ -1,0 +1,722 @@
+[
+  {
+    "productName": "코카콜라",
+    "productId": "BV001",
+    "price": 1500,
+    "category": "음료"
+  },
+  {
+    "productName": "칠성사이다",
+    "productId": "BV002",
+    "price": 1500,
+    "category": "음료"
+  },
+  {
+    "productName": "오렌지주스 (델몬트)",
+    "productId": "BV003",
+    "price": 2500,
+    "category": "음료"
+  },
+  {
+    "productName": "칸타타 콘트라베이스 콜드브루",
+    "productId": "BV004",
+    "price": 2800,
+    "category": "음료"
+  },
+  {
+    "productName": "레쓰비 마일드 커피",
+    "productId": "BV005",
+    "price": 1000,
+    "category": "음료"
+  },
+  {
+    "productName": "초록매실",
+    "productId": "BV006",
+    "price": 1200,
+    "category": "음료"
+  },
+  {
+    "productName": "옥수수수염차",
+    "productId": "BV007",
+    "price": 1300,
+    "category": "음료"
+  },
+  {
+    "productName": "아침햇살",
+    "productId": "BV008",
+    "price": 1500,
+    "category": "음료"
+  },
+  {
+    "productName": "비락식혜",
+    "productId": "BV009",
+    "price": 1500,
+    "category": "음료"
+  },
+  {
+    "productName": "데자와 밀크티",
+    "productId": "BV010",
+    "price": 1800,
+    "category": "음료"
+  },
+  {
+    "productName": "게토레이",
+    "productId": "BV011",
+    "price": 1800,
+    "category": "음료"
+  },
+  {
+    "productName": "파워에이드",
+    "productId": "BV012",
+    "price": 1800,
+    "category": "음료"
+  },
+  {
+    "productName": "핫식스",
+    "productId": "BV013",
+    "price": 1200,
+    "category": "음료"
+  },
+  {
+    "productName": "몬스터 에너지",
+    "productId": "BV014",
+    "price": 2000,
+    "category": "음료"
+  },
+  {
+    "productName": "씨그램 플레인",
+    "productId": "BV015",
+    "price": 1000,
+    "category": "음료"
+  },
+  {
+    "productName": "삼다수 500ml",
+    "productId": "BV016",
+    "price": 800,
+    "category": "음료"
+  },
+  {
+    "productName": "하늘보리",
+    "productId": "BV017",
+    "price": 1300,
+    "category": "음료"
+  },
+  {
+    "productName": "웰치스 포도",
+    "productId": "BV018",
+    "price": 1200,
+    "category": "음료"
+  },
+  {
+    "productName": "립톤 아이스티 복숭아",
+    "productId": "BV019",
+    "price": 1000,
+    "category": "음료"
+  },
+  {
+    "productName": "빽다방 달콤아메리카노",
+    "productId": "BV020",
+    "price": 3000,
+    "category": "음료"
+  },
+  {
+    "productName": "새우깡",
+    "productId": "SN001",
+    "price": 1200,
+    "category": "스낵"
+  },
+  {
+    "productName": "포카칩 어니언맛",
+    "productId": "SN002",
+    "price": 1500,
+    "category": "스낵"
+  },
+  {
+    "productName": "꼬북칩 초코츄러스맛",
+    "productId": "SN003",
+    "price": 2000,
+    "category": "스낵"
+  },
+  {
+    "productName": "초코파이 정",
+    "productId": "SN004",
+    "price": 5000,
+    "category": "스낵"
+  },
+  {
+    "productName": "오예스",
+    "productId": "SN005",
+    "price": 4800,
+    "category": "스낵"
+  },
+  {
+    "productName": "웨하스",
+    "productId": "SN006",
+    "price": 1500,
+    "category": "스낵"
+  },
+  {
+    "productName": "크라운산도 딸기맛",
+    "productId": "SN007",
+    "price": 2000,
+    "category": "스낵"
+  },
+  {
+    "productName": "버터링",
+    "productId": "SN008",
+    "price": 2500,
+    "category": "스낵"
+  },
+  {
+    "productName": "맛동산",
+    "productId": "SN009",
+    "price": 2200,
+    "category": "스낵"
+  },
+  {
+    "productName": "칙촉 오리지널",
+    "productId": "SN010",
+    "price": 2800,
+    "category": "스낵"
+  },
+  {
+    "productName": "고래밥 볶음양념맛",
+    "productId": "SN011",
+    "price": 1200,
+    "category": "스낵"
+  },
+  {
+    "productName": "콘칲",
+    "productId": "SN012",
+    "price": 1000,
+    "category": "스낵"
+  },
+  {
+    "productName": "스윙칩 간장치킨맛",
+    "productId": "SN013",
+    "price": 1500,
+    "category": "스낵"
+  },
+  {
+    "productName": "프링글스 오리지널",
+    "productId": "SN014",
+    "price": 3500,
+    "category": "스낵"
+  },
+  {
+    "productName": "홈런볼 오리지널",
+    "productId": "SN015",
+    "price": 1500,
+    "category": "스낵"
+  },
+  {
+    "productName": "제크",
+    "productId": "SN016",
+    "price": 1200,
+    "category": "스낵"
+  },
+  {
+    "productName": "칸쵸",
+    "productId": "SN017",
+    "price": 1000,
+    "category": "스낵"
+  },
+  {
+    "productName": "죠리퐁",
+    "productId": "SN018",
+    "price": 1000,
+    "category": "스낵"
+  },
+  {
+    "productName": "빠다코코낫",
+    "productId": "SN019",
+    "price": 1200,
+    "category": "스낵"
+  },
+  {
+    "productName": "사또밥",
+    "productId": "SN020",
+    "price": 1000,
+    "category": "스낵"
+  },
+  {
+    "productName": "농심 신라면 컵",
+    "productId": "IM001",
+    "price": 1200,
+    "category": "즉석식품"
+  },
+  {
+    "productName": "오뚜기 진라면 매운맛 컵",
+    "productId": "IM002",
+    "price": 1000,
+    "category": "즉석식품"
+  },
+  {
+    "productName": "삼양 불닭볶음면 컵",
+    "productId": "IM003",
+    "price": 1500,
+    "category": "즉석식품"
+  },
+  {
+    "productName": "비비고 김치찌개 (즉석)",
+    "productId": "IM004",
+    "price": 3500,
+    "category": "즉석식품"
+  },
+  {
+    "productName": "오뚜기 3분 카레",
+    "productId": "IM005",
+    "price": 1500,
+    "category": "즉석식품"
+  },
+  {
+    "productName": "햇반 컵반 강된장 보리밥",
+    "productId": "IM006",
+    "price": 4000,
+    "category": "즉석식품"
+  },
+  {
+    "productName": "동원 양반 들기름 김",
+    "productId": "IM007",
+    "price": 2000,
+    "category": "즉석식품"
+  },
+  {
+    "productName": "천일식품 김치볶음밥 (냉동)",
+    "productId": "IM008",
+    "price": 3000,
+    "category": "즉석식품"
+  },
+  {
+    "productName": "오뚜기 죽 야채죽",
+    "productId": "IM009",
+    "price": 2500,
+    "category": "즉석식품"
+  },
+  {
+    "productName": "풀무원 생가득 얇은피 만두",
+    "productId": "IM010",
+    "price": 7000,
+    "category": "즉석식품"
+  },
+  {
+    "productName": "봉구스 밥버거 (스테디)",
+    "productId": "IM011",
+    "price": 3500,
+    "category": "즉석식품"
+  },
+  {
+    "productName": "CU 백종원 불고기 도시락",
+    "productId": "IM012",
+    "price": 5000,
+    "category": "즉석식품"
+  },
+  {
+    "productName": "GS25 혜자로운 집밥 도시락",
+    "productId": "IM013",
+    "price": 4800,
+    "category": "즉석식품"
+  },
+  {
+    "productName": "세븐일레븐 전주비빔밥 삼각김밥",
+    "productId": "IM014",
+    "price": 1000,
+    "category": "즉석식품"
+  },
+  {
+    "productName": "CJ 제일제당 스팸 (클래식)",
+    "productId": "IM015",
+    "price": 5000,
+    "category": "즉석식품"
+  },
+  {
+    "productName": "하림 자연실록 통닭가슴살",
+    "productId": "IM016",
+    "price": 6000,
+    "category": "즉석식품"
+  },
+  {
+    "productName": "동원참치 컵밥",
+    "productId": "IM017",
+    "price": 3500,
+    "category": "즉석식품"
+  },
+  {
+    "productName": "풀무원 올바른 핫도그 (냉동)",
+    "productId": "IM018",
+    "price": 4000,
+    "category": "즉석식품"
+  },
+  {
+    "productName": "종가집 맛김치",
+    "productId": "IM019",
+    "price": 4500,
+    "category": "즉석식품"
+  },
+  {
+    "productName": "목우촌 주부9단 햄",
+    "productId": "IM020",
+    "price": 3000,
+    "category": "즉석식품"
+  },
+  {
+    "productName": "서울우유 1000ml",
+    "productId": "DM001",
+    "price": 2800,
+    "category": "유제품/아이스크림"
+  },
+  {
+    "productName": "매일우유 저지방 900ml",
+    "productId": "DM002",
+    "price": 2500,
+    "category": "유제품/아이스크림"
+  },
+  {
+    "productName": "남양맛있는우유GT",
+    "productId": "DM003",
+    "price": 2700,
+    "category": "유제품/아이스크림"
+  },
+  {
+    "productName": "요플레 오리지널",
+    "productId": "DM004",
+    "price": 1000,
+    "category": "유제품/아이스크림"
+  },
+  {
+    "productName": "빙그레 바나나맛우유",
+    "productId": "DM005",
+    "price": 1400,
+    "category": "유제품/아이스크림"
+  },
+  {
+    "productName": "연세우유 (두유)",
+    "productId": "DM006",
+    "price": 1200,
+    "category": "유제품/아이스크림"
+  },
+  {
+    "productName": "동서 리얼치즈",
+    "productId": "DM007",
+    "price": 4000,
+    "category": "유제품/아이스크림"
+  },
+  {
+    "productName": "투게더 오리지널",
+    "productId": "DM008",
+    "price": 7000,
+    "category": "유제품/아이스크림"
+  },
+  {
+    "productName": "엑설런트 바닐라",
+    "productId": "DM009",
+    "price": 6000,
+    "category": "유제품/아이스크림"
+  },
+  {
+    "productName": "부라보콘 바닐라",
+    "productId": "DM010",
+    "price": 1800,
+    "category": "유제품/아이스크림"
+  },
+  {
+    "productName": "월드콘",
+    "productId": "DM011",
+    "price": 1800,
+    "category": "유제품/아이스크림"
+  },
+  {
+    "productName": "메로나",
+    "productId": "DM012",
+    "price": 1000,
+    "category": "유제품/아이스크림"
+  },
+  {
+    "productName": "스크류바",
+    "productId": "DM013",
+    "price": 1000,
+    "category": "유제품/아이스크림"
+  },
+  {
+    "productName": "죠스바",
+    "productId": "DM014",
+    "price": 1000,
+    "category": "유제품/아이스크림"
+  },
+  {
+    "productName": "돼지바",
+    "productId": "DM015",
+    "price": 1000,
+    "category": "유제품/아이스크림"
+  },
+  {
+    "productName": "누가바",
+    "productId": "DM016",
+    "price": 1000,
+    "category": "유제품/아이스크림"
+  },
+  {
+    "productName": "쌍쌍바",
+    "productId": "DM017",
+    "price": 1000,
+    "category": "유제품/아이스크림"
+  },
+  {
+    "productName": "구구콘",
+    "productId": "DM018",
+    "price": 1800,
+    "category": "유제품/아이스크림"
+  },
+  {
+    "productName": "빠삐코",
+    "productId": "DM019",
+    "price": 1000,
+    "category": "유제품/아이스크림"
+  },
+  {
+    "productName": "붕어싸만코",
+    "productId": "DM020",
+    "price": 1500,
+    "category": "유제품/아이스크림"
+  },
+  {
+    "productName": "참이슬 후레쉬",
+    "productId": "AL001",
+    "price": 1900,
+    "category": "주류"
+  },
+  {
+    "productName": "처음처럼",
+    "productId": "AL002",
+    "price": 1900,
+    "category": "주류"
+  },
+  {
+    "productName": "하이트 진로이즈백",
+    "productId": "AL003",
+    "price": 2000,
+    "category": "주류"
+  },
+  {
+    "productName": "카스 프레시 캔 500ml",
+    "productId": "AL004",
+    "price": 2700,
+    "category": "주류"
+  },
+  {
+    "productName": "테라 캔 500ml",
+    "productId": "AL005",
+    "price": 2700,
+    "category": "주류"
+  },
+  {
+    "productName": "칭따오 캔 500ml",
+    "productId": "AL006",
+    "price": 3500,
+    "category": "주류"
+  },
+  {
+    "productName": "아사히 슈퍼드라이 캔 500ml",
+    "productId": "AL007",
+    "price": 4000,
+    "category": "주류"
+  },
+  {
+    "productName": "타이거 맥주 캔 500ml",
+    "productId": "AL008",
+    "price": 3000,
+    "category": "주류"
+  },
+  {
+    "productName": "호가든 로제 캔 500ml",
+    "productId": "AL009",
+    "price": 3800,
+    "category": "주류"
+  },
+  {
+    "productName": "국순당 생막걸리",
+    "productId": "AL010",
+    "price": 2500,
+    "category": "주류"
+  },
+  {
+    "productName": "장수 막걸리",
+    "productId": "AL011",
+    "price": 2000,
+    "category": "주류"
+  },
+  {
+    "productName": "백세주",
+    "productId": "AL012",
+    "price": 5000,
+    "category": "주류"
+  },
+  {
+    "productName": "복분자주",
+    "productId": "AL013",
+    "price": 10000,
+    "category": "주류"
+  },
+  {
+    "productName": "진로이즈백",
+    "productId": "AL014",
+    "price": 2000,
+    "category": "주류"
+  },
+  {
+    "productName": "발렌타인 17년",
+    "productId": "AL015",
+    "price": 150000,
+    "category": "주류"
+  },
+  {
+    "productName": "앱솔루트 보드카 오리지널",
+    "productId": "AL016",
+    "price": 45000,
+    "category": "주류"
+  },
+  {
+    "productName": "조니워커 블랙라벨",
+    "productId": "AL017",
+    "price": 60000,
+    "category": "주류"
+  },
+  {
+    "productName": "잭다니엘스 No.7",
+    "productId": "AL018",
+    "price": 50000,
+    "category": "주류"
+  },
+  {
+    "productName": "몬테스 알파 까베르네 소비뇽",
+    "productId": "AL019",
+    "price": 30000,
+    "category": "주류"
+  },
+  {
+    "productName": "청하",
+    "productId": "AL020",
+    "price": 4000,
+    "category": "주류"
+  },
+  {
+    "productName": "LG생활건강 테크 액체세제",
+    "productId": "HL001",
+    "price": 12000,
+    "category": "생활용품"
+  },
+  {
+    "productName": "애경 스파크 가루세제",
+    "productId": "HL002",
+    "price": 9000,
+    "category": "생활용품"
+  },
+  {
+    "productName": "유한킴벌리 크리넥스 각티슈",
+    "productId": "HL003",
+    "price": 5000,
+    "category": "생활용품"
+  },
+  {
+    "productName": "모나리자 3겹 화장지 30롤",
+    "productId": "HL004",
+    "price": 20000,
+    "category": "생활용품"
+  },
+  {
+    "productName": "P&G 팬틴 극손상케어 샴푸",
+    "productId": "HL005",
+    "price": 11000,
+    "category": "생활용품"
+  },
+  {
+    "productName": "아모레퍼시픽 미쟝센 퍼펙트 세럼 트리트먼트",
+    "productId": "HL006",
+    "price": 9000,
+    "category": "생활용품"
+  },
+  {
+    "productName": "닥터아돌 프로폴리스 치약",
+    "productId": "HL007",
+    "price": 8000,
+    "category": "생활용품"
+  },
+  {
+    "productName": "덴티스테 플러스 화이트 치약",
+    "productId": "HL008",
+    "price": 12000,
+    "category": "생활용품"
+  },
+  {
+    "productName": "페리오 토탈케어 칫솔",
+    "productId": "HL009",
+    "price": 4000,
+    "category": "생활용품"
+  },
+  {
+    "productName": "타올나라 호텔수건 (2장)",
+    "productId": "HL010",
+    "price": 15000,
+    "category": "생활용품"
+  },
+  {
+    "productName": "도루코 면도기 (PACE 6)",
+    "productId": "HL011",
+    "price": 10000,
+    "category": "생활용품"
+  },
+  {
+    "productName": "해피바스 자몽향 바디워시",
+    "productId": "HL012",
+    "price": 9500,
+    "category": "생활용품"
+  },
+  {
+    "productName": "사자표 락스",
+    "productId": "HL013",
+    "price": 3000,
+    "category": "생활용품"
+  },
+  {
+    "productName": "잘풀리는집 데일리 물티슈 100매",
+    "productId": "HL014",
+    "price": 3500,
+    "category": "생활용품"
+  },
+  {
+    "productName": "피죤 핑크로즈 섬유유연제",
+    "productId": "HL015",
+    "price": 6000,
+    "category": "생활용품"
+  },
+  {
+    "productName": "코코도르 디퓨저 (블랙체리)",
+    "productId": "HL016",
+    "price": 15000,
+    "category": "생활용품"
+  },
+  {
+    "productName": "3M 스카치 브라이트 수세미",
+    "productId": "HL017",
+    "price": 2000,
+    "category": "생활용품"
+  },
+  {
+    "productName": "유한킴벌리 뽀삐 키친타올",
+    "productId": "HL018",
+    "price": 5000,
+    "category": "생활용품"
+  },
+  {
+    "productName": "아이가드 살균 스프레이",
+    "productId": "HL019",
+    "price": 7000,
+    "category": "생활용품"
+  },
+  {
+    "productName": "다이소 AA 건전지 4개입",
+    "productId": "HL020",
+    "price": 2000,
+    "category": "생활용품"
+  }
+]
