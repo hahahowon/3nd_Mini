@@ -7,6 +7,7 @@
 #include <QObject>
 #include <QMap>
 #include "product.h"
+#include "orderedproduct.h"
 
 class ProductManager :public QObject {
     Q_OBJECT
@@ -14,6 +15,7 @@ class ProductManager :public QObject {
 public:
     static ProductManager& getInstance();
     bool registerProduct(Product* product, const QString& productID);
+    bool registerOrderedProducts(OrderedProduct* product, const QString& productID);
     Product* findProductByCategory(const QString& productCategory);
     Product* findProductByName(const QString& productName);
     bool removeProduct(const QString& productID);
@@ -29,6 +31,7 @@ private:
     ProductManager& operator=(const ProductManager&) = delete;
 
     QMap<QString, Product*> productsByID;
+    QMap<QString, OrderedProduct*> orderedProducts;
 };
 
 #endif // PRODUCTMANAGER_H
