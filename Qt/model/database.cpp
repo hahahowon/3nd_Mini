@@ -17,8 +17,8 @@ bool Database::connectToDatabase() {
     QSqlDatabase db = QSqlDatabase::addDatabase("QMYSQL");
     db.setHostName("localhost");        // MySQL 서버 주소
     db.setDatabaseName("qt25");         // 데이터베이스 이름
-    db.setUserName("root");             // 사용자 이름
-    db.setPassword("0000");             // 비밀번호+
+    db.setUserName("manager");             // 사용자 이름
+    db.setPassword("1234");             // 비밀번호+
     db.setPort(3306);                   // MySQL 포트 (기본값)
 
     if (!db.open()) {
@@ -109,6 +109,7 @@ QJsonArray Database::getAllProducts() {
         // 확인을 위한 qDebug Line
         qDebug() << product->getProductID() << "registered.";
         //qDebug() << productObject;
+
     }
 
     return productsArray;

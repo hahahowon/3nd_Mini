@@ -5,7 +5,7 @@
 #include "normal.h"
 #include "normalchatform.h"
 #include "normalorderform.h"
-
+#include "normalorderverifyform.h"
 class NormalController : public QObject {
     Q_OBJECT
 
@@ -18,6 +18,7 @@ private:
     Normal *m_normal;
     NormalChatForm *m_normalChatForm;
     NormalOrderForm *m_normalOrderForm;
+    NormalOrderVerifyForm *m_normalOrderVerifyForm;
 };
 
 #endif // NORMALCONTROLLER_H

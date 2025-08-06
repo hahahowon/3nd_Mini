@@ -12,10 +12,12 @@ Normal::Normal(QWidget *parent)
 
     m_normalChatForm = new NormalChatForm(this);
     m_normalOrderForm = new NormalOrderForm(this);
-
+    m_normalOrderVerifyForm = new NormalOrderVerifyForm(this);
     // tab에 객체 추가
     ui->tabWidget->addTab(m_normalChatForm, tr("채팅서버"));
     ui->tabWidget->addTab(m_normalOrderForm, tr("발주관리"));
+    ui->tabWidget->addTab(m_normalOrderVerifyForm, tr("수량확인"));
+
 }
 
 Normal::~Normal() {
@@ -24,10 +26,19 @@ Normal::~Normal() {
 
 void Normal::setController(NormalController *normalController) {
     m_normalController = normalController;
+
+    //connect(m_normalOrderForm, &NormalOrderForm::orderUpdate, m_normalOrderVerifyForm, &NormalOrderVerifyForm::updateOrderList);
     // connect 함수 나열
     /***************************************************************/
     //
     //
     //
     /***************************************************************/
+    qDebug() << "Connecting objects:";
+    qDebug() << "Sender: " << m_normalOrderForm;
+    qDebug() << "Receiver: " << m_normalOrderVerifyForm;
+
+    bool connected = connect(m_normalOrderForm, &NormalOrderForm::orderUpdate,
+                             m_normalOrderVerifyForm, &NormalOrderVerifyForm::updateOrderList);
+    qDebug() << "Connection successful? " << connected;
 }

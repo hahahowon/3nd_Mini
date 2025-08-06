@@ -3,7 +3,7 @@
 #include "normalorderform.h"
 #include "ui_normalorderform.h"
 #include "productmanager.h"
-
+// #include "normalcontroller.h"
 NormalOrderForm::NormalOrderForm(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::NormalOrderForm) {
@@ -211,6 +211,10 @@ NormalOrderForm::NormalOrderForm(QWidget *parent)
     connect(ui->milkiceWidget, &QTableWidget::itemDoubleClicked, this, &NormalOrderForm::onItemDoubleClicked);
     connect(ui->drinkWidget, &QTableWidget::itemDoubleClicked, this, &NormalOrderForm::onItemDoubleClicked);
     connect(ui->neceWidget, &QTableWidget::itemDoubleClicked, this, &NormalOrderForm::onItemDoubleClicked);
+
+
+
+
 }
 
 NormalOrderForm::~NormalOrderForm() {
@@ -307,7 +311,11 @@ void NormalOrderForm::on_orderButton_clicked() {
 
             // QMap에 삽입 (상품ID를 키로 사용)
             productManager.registerOrderedProducts(product, id);
+
         }
     }
+    emit orderUpdate();
+
+    qDebug() << "발주 버튼 클릭됨. emit 호출 객체 주소:" << this;
 }
 

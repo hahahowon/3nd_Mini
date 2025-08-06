@@ -12,7 +12,8 @@ class NormalOrderForm;
 
 class NormalOrderForm : public QWidget {
     Q_OBJECT
-
+signals:
+    void orderUpdate();
 public:
     explicit NormalOrderForm(QWidget *parent = nullptr);
     ~NormalOrderForm();

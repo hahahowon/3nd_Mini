@@ -29,7 +29,8 @@ SOURCES += \
     view/login.cpp \
     view/normal.cpp \
     view/normalchatform.cpp \
-    view/normalorderform.cpp
+    view/normalorderform.cpp \
+    view/normalorderverifyform.cpp
 
 HEADERS += \
     controller/admincontroller.h \
@@ -49,7 +50,8 @@ HEADERS += \
     view/login.h \
     view/normal.h \
     view/normalchatform.h \
-    view/normalorderform.h
+    view/normalorderform.h \
+    view/normalorderverifyform.h
 
 FORMS += \
     view/admin.ui \
@@ -60,7 +62,8 @@ FORMS += \
     view/login.ui \
     view/normal.ui \
     view/normalchatform.ui \
-    view/normalorderform.ui
+    view/normalorderform.ui \
+    view/normalorderverifyform.ui
 
 TRANSLATIONS += \
     lang/QT25_ko_KR.ts
