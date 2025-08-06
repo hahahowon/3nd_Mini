@@ -1,5 +1,6 @@
 #include "normalcontroller.h"
 
+
 NormalController::NormalController(QObject *parent) {
     qDebug() << "Normal Sequence Started";
 }
@@ -12,3 +13,4 @@ void NormalController::setNormalView(Normal *normal) {
     m_normalChatForm = normal->m_normalChatForm;
     m_normalOrderForm = normal->m_normalOrderForm;
 }
+

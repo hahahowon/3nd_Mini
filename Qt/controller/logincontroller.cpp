@@ -4,6 +4,7 @@
 #include "normalcontroller.h"
 #include "admin.h"
 #include "Normal.h"
+#include "membermanager.h"
 
 LoginController::LoginController(QObject *parent) {
     //connect(ui->logInButton, &QPushButton::clicked, this, &LoginController::onLoginButtonClicked);
@@ -21,15 +22,46 @@ void LoginController::processLogin(const QString &username, const QString &passw
     // username, userpassword에 의해 사용자 판단 로직
     // login 로직 구현
     //***************************************************************/
-    //
-    //
-    //
-    //***************************************************************/
-    if (true) {         // Admin일 경우
-        emit loginSuccess(username, true);
-    } else if (false) { // Normal일 경우
-        emit loginSuccess(username, false);
-    } else {            // 오류 처리
+    bool logged_in = false;
+    bool managerFlag = false;
+    MemberManager& memberManager = MemberManager::getInstance();
+    QString userid = username;
+    QString userpw = password;
+    QMap<QString, Member*> temp;
+    temp = memberManager.getMemberMap();
+    for (auto it = temp.constBegin(); it!=temp.constEnd(); ++it) {
+        if (it.key() == userid && it.value()->getMemberPW() == userpw) {
+            if (it.value()->isManager()==true){
+                QMap<QString, Member*> loginMember;
+                loginMember.insert(it.key(), it.value());
+                memberManager.setLoggedInMember(loginMember);
+                logged_in = true;
+                managerFlag = true;
+                //Admin *admin = new Admin;
+                //admin->show();
+                //this->close();
+            } else {
+                QMap<QString, Member*> loginMember;
+                loginMember.insert(it.key(), it.value());
+                memberManager.setLoggedInMember(loginMember);
+                logged_in = true;
+                managerFlag = false;
+                qDebug() << "normal";
+                //Normal *normal = new Normal;
+                //normal->show();
+                //this->close();
+            }
+            if (logged_in && managerFlag) {         // Admin일 경우
+                emit loginSuccess(username, true);
+                break;
+            } else if (logged_in && !managerFlag) { // Normal일 경우
+                emit loginSuccess(username, false);
+                break;
+            }
+        }
+    }
+    // 오류 처리
+    if (!logged_in) {
         emit loginFailed(tr("아이디 또는 비밀번호가 잘못되었습니다"));
     }
 }
@@ -53,7 +85,6 @@ void Login::handleLoginSuccess(const QString &username, bool isAdmin) {
         normalController->setNormalView(m_normal);
         m_normal->setController(normalController);
         m_normal->show();
-
     }
 
     // 현재 로그인 창 닫기 (필요에 따라)
@@ -63,6 +94,7 @@ void Login::handleLoginSuccess(const QString &username, bool isAdmin) {
 void Login::handleLoginFailed(const QString &errorMessage) {
     // 로그인 실패 메시지 표시 (예: QMessageBox 사용)
     QMessageBox::warning(this, "로그인 오류", errorMessage);
+    qDebug() << "로그인 오류";
 }
 
 // void LoginController::onLoginButtonClicked() {
