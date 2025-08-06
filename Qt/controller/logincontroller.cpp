@@ -67,6 +67,11 @@ void LoginController::processLogin(const QString &username, const QString &passw
 }
 
 void Login::handleLoginSuccess(const QString &username, bool isAdmin) {
+    qDebug() << "Login::setController() 함수 호출됨.";
+    if (m_controller == nullptr) {
+        qDebug() << "경고: LoginController 포인터가 nullptr입니다.";
+    }
+
     // 로그인 성공 처리
     if (isAdmin) {
         // 관리자용 Form 열기
@@ -82,8 +87,8 @@ void Login::handleLoginSuccess(const QString &username, bool isAdmin) {
         //emit openUserForm(username);
         Normal *m_normal = new Normal;
         NormalController *normalController = new NormalController();
-        normalController->setNormalView(m_normal);
         m_normal->setController(normalController);
+        normalController->setNormalView(m_normal);
         m_normal->show();
     }
 

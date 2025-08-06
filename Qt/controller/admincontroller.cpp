@@ -1,5 +1,6 @@
 #include "admincontroller.h"
-
+#include "normalorderform.h"
+#include "normalorderverifyform.h"
 AdminController::AdminController(QObject *parent) {
     qDebug() << "Admin Sequence Started";
 }

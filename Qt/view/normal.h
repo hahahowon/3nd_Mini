@@ -3,7 +3,7 @@
 
 #include "normalchatform.h"
 #include "normalorderform.h"
-
+#include "normalorderverifyform.h"
 #include <QMainWindow>
 class NormalController;
 
@@ -22,6 +22,7 @@ public:
 
     NormalChatForm *m_normalChatForm;
     NormalOrderForm *m_normalOrderForm;
+    NormalOrderVerifyForm *m_normalOrderVerifyForm;
 
 private:
     Ui::Normal *ui;

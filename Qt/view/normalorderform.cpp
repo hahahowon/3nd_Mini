@@ -3,7 +3,7 @@
 #include "normalorderform.h"
 #include "ui_normalorderform.h"
 #include "productmanager.h"
-
+// #include "normalcontroller.h"
 NormalOrderForm::NormalOrderForm(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::NormalOrderForm) {
@@ -211,6 +211,10 @@ NormalOrderForm::NormalOrderForm(QWidget *parent)
     connect(ui->milkiceWidget, &QTableWidget::itemDoubleClicked, this, &NormalOrderForm::onItemDoubleClicked);
     connect(ui->drinkWidget, &QTableWidget::itemDoubleClicked, this, &NormalOrderForm::onItemDoubleClicked);
     connect(ui->neceWidget, &QTableWidget::itemDoubleClicked, this, &NormalOrderForm::onItemDoubleClicked);
+
+
+
+
 }
 
 NormalOrderForm::~NormalOrderForm() {
@@ -270,12 +274,6 @@ void NormalOrderForm::onItemDoubleClicked(QTableWidgetItem *item) {
 
     // 디버깅 메시지
     qDebug() << nameItem->text() << idItem->text() << priceItem->text() << categoryItem->text() << quantityItem->text();
-
-
-
-
-
-    // json 저장
 }
 
 int NormalOrderForm::getOrderCount() {
@@ -289,3 +287,35 @@ void NormalOrderForm::increaseOrderCount() {
 void NormalOrderForm::decreaseOrderCount() {
     orderCount--;
 }
+
+void NormalOrderForm::on_orderButton_clicked() {
+    ProductManager& productManager = ProductManager::getInstance();
+    int rowCount = ui->orderWidget->rowCount();
+
+    for (int row = 0; row < rowCount; ++row) {
+        QTableWidgetItem* idItem = ui->orderWidget->item(row, 0);        // 상품ID
+        QTableWidgetItem* nameItem = ui->orderWidget->item(row, 1);      // 상품명
+        QTableWidgetItem* priceItem = ui->orderWidget->item(row, 2);     // 가격
+        QTableWidgetItem* categoryItem = ui->orderWidget->item(row, 3);  // 카테고리
+        QTableWidgetItem* quantityItem = ui->orderWidget->item(row, 4);  // 개수
+
+        if (idItem && nameItem && priceItem && categoryItem && quantityItem) {
+            QString id = idItem->text();
+            QString name = nameItem->text();
+            int price = priceItem->data(Qt::EditRole).toInt();  // 숫자형 데이터로 변환
+            QString category = categoryItem->text();
+            int quantity = quantityItem->data(Qt::EditRole).toInt();
+
+            // Product 객체 생성
+            OrderedProduct* product = new OrderedProduct(name, id, price, category, quantity);
+
+            // QMap에 삽입 (상품ID를 키로 사용)
+            productManager.registerOrderedProducts(product, id);
+
+        }
+    }
+    emit orderUpdate();
+
+    qDebug() << "발주 버튼 클릭됨. emit 호출 객체 주소:" << this;
+}
+

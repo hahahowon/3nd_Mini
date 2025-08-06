@@ -28,8 +28,8 @@ int main(int argc, char *argv[]) {
     // Login 화면 우선 출력: 이후 Login.cpp에서 분기점 형성
     Login w;
     LoginController *controller = new LoginController();
-    controller->setView(&w);
     w.setController(controller);
+    controller->setView(&w);
     w.show();
 
     return a.exec();
