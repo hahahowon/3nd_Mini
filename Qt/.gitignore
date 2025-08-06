@@ -1,5 +1,4 @@
-# C++ objects and libs
-
+# C++ object files and libraries
 *.slo
 *.lo
 *.o
@@ -15,7 +14,7 @@
 *.ilk
 *.pdb
 
-# Qt 관련
+# Qt generated files
 object_script.*.Release
 object_script.*.Debug
 *_plugin_import.cpp
@@ -30,24 +29,33 @@ ui_*.h
 *.qm
 *.autosave
 
-# Qt 프로젝트 설정
+# QtCreator project settings
 /.qmake.cache
 /.qmake.stash
 *.pro.user
 *.pro.user.*
 *.qbs.user
 *.qbs.user.*
-CMakeLists.txt.user*
 *.qmlproject.user
 *.qmlproject.user.*
 *creator.user*
 *_qmlcache.qrc
 
-# 빌드 디렉토리 무시
+# CMake
+CMakeLists.txt.user*
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+
+# Build directories (highly recommended)
 build/
 *build-*/
+Qt/build/
 
-# Makefile 및 기타
+# Makefile and misc
 Makefile*
 target_wrapper.*
 compile_commands.json
+
+# Qt Creator clangd cache
+**/.qtc_clangd/
