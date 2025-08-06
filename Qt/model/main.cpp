@@ -12,6 +12,7 @@ int main(int argc, char *argv[]) {
     Database& db = Database::getInstance();
     db.connectToDatabase();
     db.getAllUsers();
+    db.getAllProducts();
     /***************************************************************/
 
     // 국제화 로직 구현

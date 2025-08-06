@@ -11,12 +11,15 @@
 #include <QJsonObject>
 #include <QJsonDocument>
 #include <QFile>
+#include "membermanager.h"
+#include "productmanager.h"
 
 class Database : public QObject {
 public:
     static Database& getInstance();
     bool connectToDatabase();
     QJsonArray getAllUsers();
+    QJsonArray getAllProducts();
 
 private:
     // 싱글턴 구현을 위한 생성자/소멸자의 private 접근제한

@@ -83,6 +83,9 @@
       <height>28</height>
      </rect>
     </property>
+    <property name="inputMethodHints">
+     <set>Qt::InputMethodHint::ImhNone</set>
+    </property>
    </widget>
   </widget>
   <widget class="QPushButton" name="signUpButton">
