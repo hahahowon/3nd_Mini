@@ -23,10 +23,10 @@
     </rect>
    </property>
    <property name="currentIndex">
-    <number>5</number>
+    <number>0</number>
    </property>
-   <widget class="QWidget" name="page_7">
-    <widget class="QTableWidget" name="beverageWidget_2">
+   <widget class="QWidget" name="page_0">
+    <widget class="QTableWidget" name="beverageWidget">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -37,8 +37,8 @@
      </property>
     </widget>
    </widget>
-   <widget class="QWidget" name="page_8">
-    <widget class="QTableWidget" name="snackWidget_2">
+   <widget class="QWidget" name="page_1">
+    <widget class="QTableWidget" name="snackWidget">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -49,8 +49,8 @@
      </property>
     </widget>
    </widget>
-   <widget class="QWidget" name="page_9">
-    <widget class="QTableWidget" name="instantWidget_2">
+   <widget class="QWidget" name="page_2">
+    <widget class="QTableWidget" name="instantWidget">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -61,8 +61,8 @@
      </property>
     </widget>
    </widget>
-   <widget class="QWidget" name="page_10">
-    <widget class="QTableWidget" name="milkiceWidget_2">
+   <widget class="QWidget" name="page_3">
+    <widget class="QTableWidget" name="milkiceWidget">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -73,8 +73,8 @@
      </property>
     </widget>
    </widget>
-   <widget class="QWidget" name="page_11">
-    <widget class="QTableWidget" name="drinkWidget_2">
+   <widget class="QWidget" name="page_4">
+    <widget class="QTableWidget" name="drinkWidget">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -85,8 +85,8 @@
      </property>
     </widget>
    </widget>
-   <widget class="QWidget" name="page_12">
-    <widget class="QTableWidget" name="neceWidget_2">
+   <widget class="QWidget" name="page_5">
+    <widget class="QTableWidget" name="neceWidget">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -97,8 +97,8 @@
      </property>
     </widget>
    </widget>
-   <widget class="QWidget" name="page_13">
-    <widget class="QTableWidget" name="allWidget_2">
+   <widget class="QWidget" name="page_6">
+    <widget class="QTableWidget" name="allWidget">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -109,6 +109,16 @@
      </property>
     </widget>
    </widget>
+  </widget>
+  <widget class="QTableWidget" name="orderWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>320</y>
+     <width>600</width>
+     <height>200</height>
+    </rect>
+   </property>
   </widget>
   <widget class="QToolBox" name="toolBox">
    <property name="geometry">
@@ -122,7 +132,7 @@
    <property name="currentIndex">
     <number>6</number>
    </property>
-   <widget class="QWidget" name="beveraageTool_2">
+   <widget class="QWidget" name="beveraageTool">
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -135,7 +145,7 @@
      <string>음료</string>
     </attribute>
    </widget>
-   <widget class="QWidget" name="snackTool_2">
+   <widget class="QWidget" name="snackTool">
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -148,7 +158,7 @@
      <string>스낵</string>
     </attribute>
    </widget>
-   <widget class="QWidget" name="instantTool_2">
+   <widget class="QWidget" name="instantTool">
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -161,7 +171,7 @@
      <string>즉석식품</string>
     </attribute>
    </widget>
-   <widget class="QWidget" name="mikiceTool_2">
+   <widget class="QWidget" name="mikiceTool">
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -174,7 +184,7 @@
      <string>유제품/아이스크림</string>
     </attribute>
    </widget>
-   <widget class="QWidget" name="drinkTool_2">
+   <widget class="QWidget" name="drinkTool">
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -187,7 +197,7 @@
      <string>주류</string>
     </attribute>
    </widget>
-   <widget class="QWidget" name="neceTool_2">
+   <widget class="QWidget" name="neceTool">
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -200,7 +210,7 @@
      <string>생활용품</string>
     </attribute>
    </widget>
-   <widget class="QWidget" name="allTool_2">
+   <widget class="QWidget" name="allTool">
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -213,16 +223,6 @@
      <string>전체</string>
     </attribute>
    </widget>
-  </widget>
-  <widget class="QTableWidget" name="orderWidget">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>320</y>
-     <width>600</width>
-     <height>200</height>
-    </rect>
-   </property>
   </widget>
  </widget>
  <resources/>
