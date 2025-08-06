@@ -24,6 +24,8 @@ private slots:
     void on_toolBox_currentChanged(int index);
     void onItemDoubleClicked(QTableWidgetItem *item);
 
+    void on_orderButton_clicked();
+
 private:
     Ui::NormalOrderForm *ui;
 
