@@ -32,6 +32,16 @@ bool ProductManager::registerProduct(Product* product, const QString& productID)
     return true;
 }
 
+bool ProductManager::registerOrderedProducts(OrderedProduct* product, const QString& productID) {
+    if (orderedProducts.count(productID)) {
+        qDebug() << QObject::tr("Error: Already exist Product");
+        return false;
+    }
+    orderedProducts[productID] = product;
+    qDebug() << QObject::tr("Product ordered: %1 %2").arg(product->getProductName()).arg(product->getProductID());
+    return true;
+}
+
 bool ProductManager::removeProduct(const QString& productID) {
     // 맵에서 이름으로 상품 찾기
     auto it = productsByID.find(productID);
