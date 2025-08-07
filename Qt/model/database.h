@@ -11,8 +11,6 @@
 #include <QJsonObject>
 #include <QJsonDocument>
 #include <QFile>
-#include "membermanager.h"
-#include "productmanager.h"
 
 class Database : public QObject {
 public:

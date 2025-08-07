@@ -1,4 +1,6 @@
 #include "database.h"
+#include "membermanager.h"
+#include "productmanager.h"
 
 Database& Database::getInstance() {
     static Database instance;
@@ -109,7 +111,6 @@ QJsonArray Database::getAllProducts() {
         // 확인을 위한 qDebug Line
         qDebug() << product->getProductID() << "registered.";
         //qDebug() << productObject;
-
     }
 
     return productsArray;

@@ -64,7 +64,6 @@ NormalOrderVerifyForm::NormalOrderVerifyForm(QWidget *parent)
     ui->drinkWidget->setColumnWidth(0, 200);
     ui->neceWidget->setColumnWidth(0, 200);
     ui->orderWidget->setColumnWidth(0, 200);
-
 }
 
 void NormalOrderVerifyForm::updateOrderList() {
