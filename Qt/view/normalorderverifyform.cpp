@@ -75,7 +75,8 @@ void NormalOrderVerifyForm::updateOrderList() {
     QMap<QString, OrderedProduct*> productCatalog = productManager.getOrderedProductMap();
 
     increaseOrderCount();
-    ui->allWidget->setRowCount(getOrderCount());
+    ui->allWidget->setRowCount(getOrderCount()+1);
+    qDebug() << getOrderCount() << "개";
 
     //orderCount = productCatalog.size();
     auto it = productCatalog.constBegin();
