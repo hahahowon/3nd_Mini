@@ -1,4 +1,4 @@
-QT       += core gui sql
+QT       += core gui sql network
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -20,6 +20,8 @@ SOURCES += \
     model/orderedproduct.cpp \
     model/product.cpp \
     model/productmanager.cpp \
+    model/raspiconnector.cpp \
+    model/qrproduct.cpp \
     view/admin.cpp \
     model/main.cpp \
     view/adminchatform.cpp \
@@ -42,6 +44,8 @@ HEADERS += \
     model/orderedproduct.h \
     model/product.h \
     model/productmanager.h \
+    model/raspiconnector.h \
+    model/qrproduct.h \
     view/admin.h \
     view/adminchatform.h \
     view/admininfoform.h \
