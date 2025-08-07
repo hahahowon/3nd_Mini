@@ -1,6 +1,9 @@
 // productmanager.cpp
-
+#include "membermanager.h"
 #include "productmanager.h"
+#include <QSqlDatabase>
+#include <QSqlQuery>
+#include <QSqlError>
 
 ProductManager& ProductManager::getInstance() {
     static ProductManager instance;
@@ -42,6 +45,16 @@ bool ProductManager::registerOrderedProducts(OrderedProduct* product, const QStr
     return true;
 }
 
+bool ProductManager::registerOrderedItems(OrderedProduct* product, const QString& productID) {
+    if (orderedItemMap.count(productID)) {
+        qDebug() << QObject::tr("Error: Already exist Product");
+        return false;
+    }
+    orderedItemMap[productID] = product;
+    qDebug() << QObject::tr("Product ordered: %1 %2").arg(product->getProductName()).arg(product->getProductID());
+    return true;
+}
+
 bool ProductManager::removeProduct(const QString& productID) {
     // 맵에서 이름으로 상품 찾기
     auto it = productsByID.find(productID);
@@ -57,6 +70,55 @@ bool ProductManager::removeProduct(const QString& productID) {
     productsByID.erase(it);
     qDebug() << QObject::tr("Product removed: %1").arg(productID);
     return true; // 탈퇴 성공
+}
+
+bool ProductManager::saveProductsToDatabase(const QMap<QString, OrderedProduct*>& orderedProducts) {
+    // 데이터베이스 연결 확인
+    QSqlDatabase db = QSqlDatabase::database();
+    MemberManager& memberManager = MemberManager::getInstance();
+    if (!db.isOpen()) {
+        qDebug() << "데이터베이스 연결이 필요합니다.";
+        return false;
+    }
+
+    bool success = true;
+
+    // 트랜잭션 시작 - 모든 쿼리를 한 번에 처리하기 위함
+    db.transaction();
+
+    QMapIterator<QString, OrderedProduct*> iter(orderedProducts);
+    while (iter.hasNext()) {
+        iter.next();
+        const QString& productID = iter.key();
+        OrderedProduct* product = iter.value();
+
+        QSqlQuery query;
+        query.prepare("INSERT INTO orderedLists (memberId, productID, productName, productPrice, productCategory, productQuantity) "
+                      "VALUES (:memberId, :productID, :productName, :productPrice, :productCategory, :productQuantity)");
+
+        query.bindValue(":memberId", memberManager.getLoggedinMember().constBegin().key());
+        query.bindValue(":productID", product->getProductID());
+        query.bindValue(":productName", product->getProductName());
+        query.bindValue(":productPrice", product->getProductPrice());
+        query.bindValue(":productCategory", product->getProductCategory());
+        query.bindValue(":productQuantity", product->getProductQauntity());
+
+        if (!query.exec()) {
+            qDebug() << "상품 저장 실패:" << productID << ", 오류:" << query.lastError().text();
+            success = false;
+            break;
+        }
+    }
+
+    // 모든 쿼리가 성공했으면 커밋, 실패했으면 롤백
+    if (success) {
+        db.commit();
+        qDebug() << "총" << orderedProducts.size() << "개의 상품이 데이터베이스에 저장되었습니다.";
+    } else {
+        db.rollback();
+        qDebug() << "상품 저장 중 오류가 발생하여 롤백되었습니다.";
+    }
+    return success;
 }
 
 Product* ProductManager::findProductByCategory(const QString& productCategory) {

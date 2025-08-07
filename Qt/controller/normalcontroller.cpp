@@ -3,9 +3,6 @@
 
 NormalController::NormalController(QObject *parent) {
     qDebug() << "Normal Sequence Started";
-
-
-
 }
 
 NormalController::~NormalController() {

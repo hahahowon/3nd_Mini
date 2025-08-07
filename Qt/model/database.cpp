@@ -28,6 +28,13 @@ bool Database::connectToDatabase() {
         return false;
     }
 
+//     QSqlQuery query;
+//     query.exec(
+//         "CREATE TABLE IF NOT EXISTS orderedLists ("
+// "id TEXT PRIMARY KEY,"
+// "name TEXT NOT NULL,"
+// ""))
+
     qDebug() << "데이터베이스 연결 성공!";
     return true;
 }
@@ -106,6 +113,48 @@ QJsonArray Database::getAllProducts() {
         Product* product = new Product(productId, productName, price, category);
 
         productManager.registerProduct(product, productId);
+
+        //productsArray.append(userObject);
+        // 확인을 위한 qDebug Line
+        qDebug() << product->getProductID() << "registered.";
+        //qDebug() << productObject;
+    }
+
+    return productsArray;
+}
+
+QJsonArray Database::getAllOrderLists() {
+    QJsonArray productsArray;
+    ProductManager& productManager = ProductManager::getInstance();
+
+    if (!db.isOpen() && !connectToDatabase()) {
+        return productsArray;
+    }
+
+    QSqlQuery query;
+    query.prepare("SELECT productId, productName, price, category, quantity FROM orderedLists");
+
+    if (!query.exec()) {
+        qDebug() << "쿼리 실행 실패: " << query.lastError().text();
+        return productsArray;
+    }
+
+    while (query.next()) {
+        QJsonObject orderedObject;
+        orderedObject["productId"] = query.value(0).toString();
+        orderedObject["productName"] = query.value(1).toString();
+        orderedObject["price"] = query.value(2).toInt();
+        orderedObject["category"] = query.value(3).toString();
+        orderedObject["quantity"] = query.value(4).toInt();
+
+        QString productId = orderedObject["productId"].toString();
+        QString productName = orderedObject["productName"].toString();
+        int price = orderedObject["price"].toInt();
+        QString category = orderedObject["category"].toString();
+        int quantity = orderedObject["quantity"].toInt();
+        OrderedProduct* product = new OrderedProduct(productId, productName, price, category, quantity);
+
+        productManager.registerOrderedProducts(product, productId);
 
         //productsArray.append(userObject);
         // 확인을 위한 qDebug Line

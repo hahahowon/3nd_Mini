@@ -91,6 +91,8 @@ void NormalOrderVerifyForm::updateOrderList() {
     }
     qDebug() << productCatalog.constBegin().key();
     qDebug() << productCatalog.constBegin().value()->getProductQauntity();
+
+    productManager.saveProductsToDatabase(productCatalog);
 }
 
 NormalOrderVerifyForm::~NormalOrderVerifyForm() {

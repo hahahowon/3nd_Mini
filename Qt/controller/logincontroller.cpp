@@ -3,7 +3,7 @@
 #include "admincontroller.h"
 #include "normalcontroller.h"
 #include "admin.h"
-#include "Normal.h"
+#include "normal.h"
 #include "membermanager.h"
 
 LoginController::LoginController(QObject *parent) {

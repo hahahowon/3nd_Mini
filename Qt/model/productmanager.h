@@ -14,11 +14,21 @@ class ProductManager :public QObject {
 
 public:
     static ProductManager& getInstance();
+
+    // 상품 카탈로그에 상품 추가 메서드
     bool registerProduct(Product* product, const QString& productID);
+
+    // 자신의 발주 데이터 작성 (normal 입장)
     bool registerOrderedProducts(OrderedProduct* product, const QString& productID);
+
+    // orderedItemMap에 저장하는 메서드 (admin 입장)
+    bool registerOrderedItems(OrderedProduct* product, const QString& productID);
     Product* findProductByCategory(const QString& productCategory);
     Product* findProductByName(const QString& productName);
     bool removeProduct(const QString& productID);
+
+    // normal 유저의 발주 데이터를 db에 저장하는 메서드
+    bool saveProductsToDatabase(const QMap<QString, OrderedProduct*>& orderedProducts);
     const QMap<QString, Product*>& getProductMap() const;
     const QMap<QString, OrderedProduct*>& getOrderedProductMap() const;
 
@@ -32,7 +42,8 @@ private:
     ProductManager& operator=(const ProductManager&) = delete;
 
     QMap<QString, Product*> productsByID;
-    QMap<QString, OrderedProduct*> orderedProducts;
+    QMap<QString, OrderedProduct*> orderedProducts; // normal 입장 (로컬에서 갖고 있는 맵)
+    QMap<QString, OrderedProduct*> orderedItemMap;  // admin 입장 (데이터베이스에서 불러온 맵)
 };
 
 #endif // PRODUCTMANAGER_H
