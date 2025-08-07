@@ -78,6 +78,7 @@ Product* ProductManager::findProductByName(const QString& productName) {
 const QMap<QString, Product*>& ProductManager::getProductMap() const {
     return productsByID;
 }
+
 const QMap<QString, OrderedProduct*>& ProductManager::getOrderedProductMap() const {
     return orderedProducts;
 }
